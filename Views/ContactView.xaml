@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="CarRentalApplication.Views.ContactView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="#F0F0F0">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Assets/CarBackGroundImage.jpg" Stretch="UniformToFill" Opacity="0.15"/>
+            </Grid.Background>
+        </Grid>
+        <Border Background="White" BorderThickness="1" BorderBrush="Gray"
+                Padding="20" Margin="40" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Contact Us" FontSize="26" FontWeight="Bold" Foreground="#1E3A5F"
+                           HorizontalAlignment="Center" Margin="0,0,0,15"/>
+                <StackPanel>
+                    <TextBlock Text="Name" FontSize="16" FontWeight="Bold" Margin="0,5,0,2"/>
+                    <TextBox Text="{Binding Name}" Width="Auto" Padding="8" BorderBrush="#1E3A5F" BorderThickness="1"/>
+
+                    <TextBlock Text="Email" FontSize="16" FontWeight="Bold" Margin="0,5,0,2"/>
+                    <TextBox Text="{Binding Email}" Width="Auto" Padding="8" BorderBrush="#1E3A5F" BorderThickness="1"/>
+
+                    <TextBlock Text="Message" FontSize="16" FontWeight="Bold" Margin="0,5,0,2"/>
+                    <TextBox Text="{Binding Message}" Width="Auto" Height="100" Padding="8" AcceptsReturn="True" TextWrapping="Wrap"
+                             BorderBrush="#1E3A5F" BorderThickness="1"/>
+                    <Button Content="Send Message" Command="{Binding SendMessageCommand}"
+                            Background="#1E3A5F" Foreground="White" Padding="12,6" Margin="10,15,10,0"
+                            FontSize="16" FontWeight="Bold" Width="Auto">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Opacity" Value="0.9"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Opacity" Value="1"/>
+                                        <Setter Property="Background" Value="#294873"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+                <TextBlock Text="Get in Touch" FontSize="22" FontWeight="Bold" Margin="20,20,0,10"/>
+                <TextBlock Text="We’re here to help you with your car rental needs." FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+                <TextBlock Text="📧 admin@autorental.com" FontSize="16" Foreground="Black" Margin="5,0,0,5"/>
+                <TextBlock Text="Follow Us" FontSize="18" FontWeight="Bold" Margin="20,10,0,5"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                    <TextBlock Text="📘 Facebook" Foreground="Blue" Margin="10,0" Cursor="Hand"/>
+                    <TextBlock Text="🐦 Twitter" Foreground="Blue" Margin="10,0" Cursor="Hand"/>
+                    <TextBlock Text="📷 Instagram" Foreground="Blue" Margin="10,0" Cursor="Hand"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

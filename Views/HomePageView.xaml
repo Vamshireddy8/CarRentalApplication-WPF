@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="CarRentalApplication.Views.HomePageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="LightGray">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Assets/CarBackGroundImage.jpg" Stretch="UniformToFill" Opacity="0.15"/>
+            </Grid.Background>
+        </Grid>
+        <Border Background="#AAFFFFFF" Padding="30" CornerRadius="10"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Welcome to Car Rental Application"
+                           FontSize="26" FontWeight="Bold" Foreground="#1E3A5F"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="Choose from a wide range of premium cars and start your journey."
+                           FontSize="16" Foreground="Gray" TextAlignment="Center" Margin="0,10,0,20"/>
+                <Button Content="Get Started"
+                        Command="{Binding NavigateLogin}"
+                        Background="#1E3A5F" Foreground="White"
+                        Padding="12,6" Width="170" FontSize="16"
+                        Cursor="Hand" BorderThickness="0"
+                        HorizontalAlignment="Center">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="8" Opacity="0.3"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Opacity" Value="0.9"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Opacity" Value="1"/>
+                                    <Setter Property="Background" Value="#294873"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="CarRentalApplication.Views.RentalTermsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="#F0F0F0">
+
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Assets/CarBackGroundImage.jpg" 
+                            Stretch="UniformToFill" Opacity="0.15"/>
+            </Grid.Background>
+        </Grid>
+
+        <Border Background="White" 
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                BorderBrush="LightGray" BorderThickness="1" CornerRadius="10">
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" >
+                <StackPanel>
+
+                    <TextBlock Text="Rental Terms and Conditions" FontSize="24" FontWeight="Bold" 
+                               Foreground="#1E3A5F" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+                    <StackPanel Margin="10">
+                        <TextBlock Text="📌 1. Eligibility" FontSize="18" FontWeight="Bold" Margin="0,5,0,2"/>
+                        <TextBlock Text="To rent a vehicle, you must be at least 21 years old and have a valid driver's license. A credit card is required for payment and security deposit."
+                                   FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="💳 2. Reservation and Payment" FontSize="18" FontWeight="Bold" Margin="10,5,0,2"/>
+                        <TextBlock Text="Reservations can be made online or in person. A valid credit card is required to secure your reservation. Full payment is due at pickup."
+                                   FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="⛽ 3. Fuel Policy" FontSize="18" FontWeight="Bold" Margin="10,5,0,2"/>
+                        <TextBlock Text="Vehicles must be returned with the same amount of fuel as at pickup. Failure to do so may result in additional fuel charges."
+                                   FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="🛡️ 4. Insurance Coverage" FontSize="18" FontWeight="Bold" Margin="10,5,0,2"/>
+                        <TextBlock Text="Insurance coverage options are available at rental. It is highly recommended to purchase insurance to protect against damage or theft."
+                                   FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="🚗 5. Mileage Policy" FontSize="18" FontWeight="Bold" Margin="10,5,0,2"/>
+                        <TextBlock Text="Mileage limits apply to certain rentals. Please check your rental agreement for details on mileage charges."
+                                   FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="❌ 6. Cancellation Policy" FontSize="18" FontWeight="Bold" Margin="10,5,0,2"/>
+                        <TextBlock Text="Cancellations must be made at least 24 hours in advance to avoid charges. Please refer to our website for specific cancellation policies."
+                                   FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                        <TextBlock Text="📞 7. Contact Us" FontSize="18" FontWeight="Bold" Margin="10,5,0,2"/>
+                        <TextBlock Text="If you have any questions regarding the rental terms and conditions, please feel free to contact our support team."
+                                   FontSize="14" Foreground="Gray" TextWrapping="Wrap" Margin="0,0,0,10"/>
+                    </StackPanel>
+
+                        <Button Content="📩 Contact Support" Command="{Binding NavigateToContact}" 
+                                Background="#1E3A5F" Foreground="White" Padding="10,5" Margin="20,10,20,0"
+                                FontSize="16" FontWeight="Bold">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Opacity" Value="0.9"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Opacity" Value="1"/>
+                                        <Setter Property="Background" Value="#294873"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                </StackPanel>
+            </ScrollViewer>
+
+        </Border>
+
+    </Grid>
+</UserControl>
