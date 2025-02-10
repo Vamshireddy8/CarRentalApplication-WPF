@@ -31,7 +31,7 @@ The **Car Rental Application** is a **WPF MVVM**-based desktop application that 
 ![Register Page](Screenshots/Register_Page.jpg)
 
 ### ** Home Page**
-![Home Page](Screenshots/HomePage.jpg)
+![Home Page](Screenshots/Homepage.jpg)
 
 ### ** Booking System**
 ![Booking System](Screenshots/Booking_System.jpg)
@@ -46,7 +46,7 @@ The **Car Rental Application** is a **WPF MVVM**-based desktop application that 
 ![RentalTerms Page](Screenshots/RentalTerms.jpg)
 
 ### ** Profile Page**
-![Profile Page](Screenshots/Profile.jpg)
+![Profile Page](Screenshots/Profile_Page.jpg)
 
 ---
 
